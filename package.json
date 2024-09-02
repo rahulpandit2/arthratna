@@ -4,7 +4,9 @@
   "description": "E-commerce jewellery website with backend (Control Panel and CRM)",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node index.js",
+    "dev": "nodemon index.js",
+    "serve": "nodemon index.js & browser-sync start --proxy 'localhost:8000' --files 'views/*.ejs' 'public/**/*.*'"
   },
   "repository": {
     "type": "git",
@@ -19,7 +21,10 @@
   "dependencies": {
     "dotenv": "^16.4.5",
     "ejs": "^3.1.10",
-    "express": "^4.19.2",
+    "express": "^4.19.2"
+  },
+  "devDependencies": {
+    "browser-sync": "^3.0.2",
     "nodemon": "^3.1.4"
   }
 }
